@@ -1,6 +1,9 @@
 package main
 
+var profissao string = "carpinteiro"
+
 func main()  {
-	
-	print("Olá GoLang")
+
+	name, age := "Rodrigo", 20
+	print("Olá GoLang ", profissao, name, age)
 }
