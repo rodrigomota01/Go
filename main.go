@@ -1,9 +1,16 @@
 package main
 
-var profissao string = "carpinteiro"
+import "fmt"
+
+type Person struct {
+	name		string
+	age			int
+	profession	string
+	isMale		bool
+}
 
 func main()  {
+	var primitivo Person
 
-	name, age := "Rodrigo", 20
-	print("Olá GoLang ", profissao, name, age)
+	fmt.Printf("primitivo=%+v\n", primitivo)
 }
