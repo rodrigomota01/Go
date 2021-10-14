@@ -10,7 +10,12 @@ type Person struct {
 }
 
 func main()  {
-	var primitivo Person
+	primitivo := Person {
+		name: "Rodrigo",
+		age: 19,
+		profession: "Analista",
+		isMale: true,
+	}
 
 	fmt.Printf("primitivo=%+v\n", primitivo)
 }
