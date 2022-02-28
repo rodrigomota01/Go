@@ -1,21 +1,16 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"net/http"
+)
 
-type Person struct {
-	name		string
-	age			int
-	profession	string
-	isMale		bool
+func landing(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprint(w, "Fala ai")
 }
 
-func main()  {
-	primitivo := Person {
-		name: "Rodrigo",
-		age: 19,
-		profession: "Analista",
-		isMale: true,
-	}
-
-	fmt.Printf("primitivo=%+v\n", primitivo)
+func main() {
+	http.HandleFunc("/", landing)
+	http.ListenAndServe(":2121", nil)
+	print("logado")
 }
