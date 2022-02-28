@@ -12,5 +12,4 @@ func landing(w http.ResponseWriter, r *http.Request) {
 func main() {
 	http.HandleFunc("/", landing)
 	http.ListenAndServe(":2121", nil)
-	print("logado")
 }
